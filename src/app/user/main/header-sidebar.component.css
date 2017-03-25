@@ -1,0 +1,27 @@
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+ md-sidenav-container {
+  margin: 0;
+  width: 100%;
+  min-height: 902px;
+}
+
+md-sidenav {
+  width: 200px;
+}
+.my-content {
+  width: 100%;
+}
+
+@media only screen and (min-width: 770px) {
+  .showOrHidebtnCls {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .showOrHidebtnCls {
+    display: block !important;
+  }
+}

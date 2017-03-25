@@ -1,0 +1,26 @@
+<div (window:resize)="onResize($event)">
+  <md-toolbar color="primary">
+    <button class="showOrHidebtnCls" md-button disableRipple="true" (click)="leftsidemenu.toggle()"><md-icon>reorder</md-icon></button>
+    <span>Alumni v1.0</span>
+    <span class="example-fill-remaining-space"></span>
+    <span>User Info</span>
+  </md-toolbar>
+
+  <md-sidenav-container>
+      <md-sidenav #leftsidemenu class="check" mode="side" opened="true">
+
+        <md-nav-list>
+          <md-list-item *ngFor="let menu of menus">
+            <md-icon md-list-icon>folder</md-icon>
+            <a md-line routerLink="{{menu.link}}">{{ menu.name }}</a>
+          </md-list-item>
+       </md-nav-list>
+
+      </md-sidenav>
+
+      <div class="my-content">
+          <router-outlet></router-outlet>
+      </div>
+
+  </md-sidenav-container>
+</div>
