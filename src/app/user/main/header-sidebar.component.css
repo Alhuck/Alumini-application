@@ -9,9 +9,7 @@
 
 md-sidenav {
   width: 200px;
-}
-.my-content {
-  width: 100%;
+  background-color: #b8e0ff;
 }
 
 @media only screen and (min-width: 770px) {
@@ -24,4 +22,15 @@ md-sidenav {
   .showOrHidebtnCls {
     display: block !important;
   }
+}
+
+.main-content-cls {
+    position: relative;
+    min-height: 885px;
+    padding: 1px;
+    background-color: white;
+}
+
+.mat-menu-content {
+  margin-top:45% !important;
 }

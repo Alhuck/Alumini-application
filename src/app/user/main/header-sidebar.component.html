@@ -3,7 +3,12 @@
     <button class="showOrHidebtnCls" md-button disableRipple="true" (click)="leftsidemenu.toggle()"><md-icon>reorder</md-icon></button>
     <span>Alumni v1.0</span>
     <span class="example-fill-remaining-space"></span>
-    <span>User Info</span>
+    <span class="fixed-position">
+      <button md-button [mdMenuTriggerFor]="menu">Menu</button>
+      <md-menu #menu="mdMenu">
+        <button md-menu-item *ngFor="let page of pages" routerLink="{{page.link}}">{{page.name}}</button>
+      </md-menu>
+    </span>
   </md-toolbar>
 
   <md-sidenav-container>
@@ -18,7 +23,7 @@
 
       </md-sidenav>
 
-      <div class="my-content">
+      <div class="main-content-cls">
           <router-outlet></router-outlet>
       </div>
 
