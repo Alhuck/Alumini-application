@@ -39,7 +39,6 @@ module.exports = {
       {
         test: /\.scss$/,
         include: helpers.root('src', 'css'),
-        // loaders: ['raw-loader', 'sass-loader']
         loader : ExtractTextPlugin.extract({ 
           fallbackLoader: 'style-loader', 
           loader: [
@@ -48,6 +47,12 @@ module.exports = {
               'sass-loader',  
           ]
          })
+      },
+      {
+        test: /\.scss$/,
+        include: helpers.root('node_modules', "ng2-smart-table"),
+        loaders: ['to-string-loader', 'css-loader', 'sass-loader']
+
       },
       {
         test: /\.css$/,

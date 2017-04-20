@@ -41,6 +41,9 @@ body {
    @include angular-material-theme($dark-theme);
  }
 
+.check-css-cls {
+  background-color: black;
+}
 // .main.m2app-dark {
 //   background-color: lightgrey;  
 // }

@@ -6,7 +6,7 @@ import {Menus} from '../../common/common.service';
 @Component({
   templateUrl: './header-sidebar.component.html',
   styleUrls: ['./header-sidebar.component.css'],
-  providers:[UserService]
+  // providers:[UserService]
 })
 export class HeaderSidebarComponent implements OnInit {
 
@@ -27,6 +27,11 @@ export class HeaderSidebarComponent implements OnInit {
   }
   
   getUserMenus() {
-    this.userService.getUserMenus().then(menus=>this.menus = menus);
+    this.userService.getUserMenus().then(menus => this.menus = menus);
   }
+
+  pages:Array<Object> = [
+    {name:"Settings", link:"userSetttings"}, 
+    {name:"Logout", link:"/login"}, 
+  ]
 }

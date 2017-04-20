@@ -1,0 +1,26 @@
+
+/*.no-margin-cls {
+    margin: 0;
+}*/
+
+.margin-center-cls {
+    margin-left: 35%;
+}
+
+.margin-cls-3p {
+    margin: 3%;
+}
+
+/*.ng2-smart-filter input, .ng2-smart-filter select {
+    line-height:normal;
+    padding: .375rem .75rem;
+    font-weight: normal;
+    width:inherit !important;
+}*/
+
+.input-table-cls {
+    width: inherit !important;
+    line-height: normal;
+    padding: .375rem .75rem;
+    font-weight: normal;
+}
